@@ -2,7 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background: #CDCBF0;
+	background: #000000;
 	color: white;
 	font-family: sans-serif;
 }
@@ -43,4 +43,5 @@ body {
 	z-index: 200;
 	pointer-events: none;
 }
+
 
