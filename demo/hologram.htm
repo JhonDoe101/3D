@@ -44,8 +44,8 @@ window.addEventListener( 'load', function() {
 		// connections
 		
 		var line = {
-			color : '#009CFF',
-			opacity: 0.35,
+			color : '#0341687',
+			opacity: 0.50,
 			hairline: true,
 			offset: -0.5
 		};
@@ -101,87 +101,131 @@ function pulse( index ) {
 var connections = [
 	// Australia & New Zealand
 	[-33.8688, 151.2093, -41.2865, 174.7762], // Sydney to Wellington
+	[-33.8688, 151.2093, 1.3521, 103.8198], // Sydney to Singapore
 	
 	// Benelux internal connections
 	[52.3676, 4.9041, 50.8503, 4.3517], // Amsterdam to Brussels
 	[50.8503, 4.3517, 49.6116, 6.1319], // Brussels to Luxembourg
+	[52.3676, 4.9041, 51.5074, -0.1278], // Amsterdam to London
 	
-	// Brazil major cities
+	// Brazil connections
 	[-23.5505, -46.6333, -22.9068, -43.1729], // São Paulo to Rio de Janeiro
 	[-15.8267, -47.9218, -23.5505, -46.6333], // Brasília to São Paulo
+	[-23.5505, -46.6333, 40.7128, -74.0060], // São Paulo to New York
+	[-23.5505, -46.6333, 38.7223, -9.1393], // São Paulo to Lisbon
 	
-	// Bulgaria
+	// Bulgaria connections
 	[42.6977, 23.3219, 42.1354, 24.7453], // Sofia to Plovdiv
+	[42.6977, 23.3219, 52.5200, 13.4050], // Sofia to Berlin
 	
-	// Canada major cities
+	// Canada connections
 	[45.5017, -73.5673, 43.6532, -79.3832], // Montreal to Toronto
 	[49.2827, -123.1207, 45.5017, -73.5673], // Vancouver to Montreal
+	[43.6532, -79.3832, 40.7128, -74.0060], // Toronto to New York
+	[49.2827, -123.1207, 51.5074, -0.1278], // Vancouver to London
 	
-	// Costa Rica
+	// Costa Rica connections
 	[9.9281, -84.0907, 10.6339, -85.4408], // San José to Liberia
+	[9.9281, -84.0907, 19.4326, -99.1332], // San José to Mexico City
+	[9.9281, -84.0907, -23.5505, -46.6333], // San José to São Paulo
 	
-	// France major cities
+	// France connections
 	[48.8566, 2.3522, 45.764, 4.8357], // Paris to Lyon
 	[45.764, 4.8357, 43.2965, 5.3698], // Lyon to Marseille
+	[48.8566, 2.3522, 51.5074, -0.1278], // Paris to London
+	[48.8566, 2.3522, 52.5200, 13.4050], // Paris to Berlin
 	
-	// Guatemala
+	// Guatemala connections
 	[14.6349, -90.5069, 15.7835, -90.2308], // Guatemala City to Flores
+	[14.6349, -90.5069, 19.4326, -99.1332], // Guatemala City to Mexico City
 	
-	// Germany major cities
+	// Germany connections
 	[52.5200, 13.4050, 48.1351, 11.5820], // Berlin to Munich
 	[50.9375, 6.9603, 52.5200, 13.4050], // Cologne to Berlin
+	[52.5200, 13.4050, 59.9139, 10.7522], // Berlin to Oslo
+	[52.5200, 13.4050, 47.4979, 19.0402], // Berlin to Budapest
 	
-	// Hungary
+	// Hungary connections
 	[47.4979, 19.0402, 46.2530, 20.1414], // Budapest to Szeged
+	[47.4979, 19.0402, 44.4268, 26.1025], // Budapest to Bucharest
 	
-	// Iberia (Spain & Portugal)
+	// Iberia connections
 	[40.4168, -3.7038, 38.7223, -9.1393], // Madrid to Lisbon
 	[41.3851, 2.1734, 40.4168, -3.7038], // Barcelona to Madrid
+	[40.4168, -3.7038, 48.8566, 2.3522], // Madrid to Paris
+	[38.7223, -9.1393, 33.9716, -6.8498], // Lisbon to Rabat
 	
-	// India & Sri Lanka
+	// India & Sri Lanka connections
 	[28.7041, 77.1025, 19.0760, 72.8777], // New Delhi to Mumbai
 	[6.9271, 79.8612, 28.7041, 77.1025], // Colombo to New Delhi
+	[28.7041, 77.1025, 13.7563, 100.5018], // New Delhi to Bangkok
+	[28.7041, 77.1025, 25.2527999878, 55.3643989563], // New Delhi to Dubai
 	
-	// Italy major cities
+	// Italy connections
 	[41.9028, 12.4964, 45.4642, 9.1900], // Rome to Milan
 	[40.8518, 14.2681, 41.9028, 12.4964], // Naples to Rome
+	[41.9028, 12.4964, 48.8566, 2.3522], // Rome to Paris
+	[41.9028, 12.4964, 52.5200, 13.4050], // Rome to Berlin
 	
-	// Japan major cities
+	// Japan connections
 	[35.6762, 139.6503, 34.6937, 135.5023], // Tokyo to Osaka
 	[43.0642, 141.3469, 35.6762, 139.6503], // Sapporo to Tokyo
+	[35.6762, 139.6503, 37.7749, -122.4194], // Tokyo to San Francisco
+	[35.6762, 139.6503, 13.7563, 100.5018], // Tokyo to Bangkok
 	
-	// Mexico major cities
+	// Mexico connections
 	[19.4326, -99.1332, 25.6866, -100.3161], // Mexico City to Monterrey
 	[20.6597, -103.3496, 19.4326, -99.1332], // Guadalajara to Mexico City
+	[19.4326, -99.1332, 40.7128, -74.0060], // Mexico City to New York
+	[19.4326, -99.1332, 34.0522, -118.2437], // Mexico City to Los Angeles
 	
-	// Morocco
+	// Morocco connections
 	[33.9716, -6.8498, 31.6295, -7.9811], // Rabat to Marrakech
+	[33.9716, -6.8498, 48.8566, 2.3522], // Rabat to Paris
 	
 	// Nordics connections
 	[59.9139, 10.7522, 59.3293, 18.0686], // Oslo to Stockholm
 	[60.1699, 24.9384, 55.6761, 12.5683], // Helsinki to Copenhagen
+	[59.9139, 10.7522, 51.5074, -0.1278], // Oslo to London
+	[59.3293, 18.0686, 52.5200, 13.4050], // Stockholm to Berlin
 	
-	// Romania
+	// Romania connections
 	[44.4268, 26.1025, 46.7712, 23.6236], // Bucharest to Cluj-Napoca
+	[44.4268, 26.1025, 42.6977, 23.3219], // Bucharest to Sofia
 	
-	// South Africa
+	// South Africa connections
 	[-33.9249, 18.4241, -26.2041, 28.0473], // Cape Town to Johannesburg
+	[-33.9249, 18.4241, -23.5505, -46.6333], // Cape Town to São Paulo
+	[-26.2041, 28.0473, 30.12190055847168, 31.40559959411621], // Johannesburg to Cairo
 	
 	// Southeast Asia connections
 	[13.7563, 100.5018, 1.3521, 103.8198], // Bangkok to Singapore
 	[14.5995, 120.9842, 13.7563, 100.5018], // Manila to Bangkok
+	[1.3521, 103.8198, -6.1255698204, 106.65599823], // Singapore to Jakarta
+	[13.7563, 100.5018, -33.8688, 151.2093], // Bangkok to Sydney
 	
-	// Switzerland
+	// Switzerland connections
 	[46.9481, 7.4474, 47.3769, 8.5417], // Bern to Zurich
+	[46.9481, 7.4474, 48.8566, 2.3522], // Bern to Paris
+	[47.3769, 8.5417, 48.1351, 11.5820], // Zurich to Munich
 	
-	// United Kingdom
+	// United Kingdom connections
 	[51.5074, -0.1278, 55.9533, -3.1883], // London to Edinburgh
 	[53.4808, -2.2426, 51.5074, -0.1278], // Manchester to London
+	[51.5074, -0.1278, 40.7128, -74.0060], // London to New York
+	[51.5074, -0.1278, 45.5017, -73.5673], // London to Montreal
 	
 	// US major connections
 	[40.7128, -74.0060, 34.0522, -118.2437], // New York to Los Angeles
 	[41.8781, -87.6298, 29.7604, -95.3698], // Chicago to Houston
 	[37.7749, -122.4194, 47.6062, -122.3321], // San Francisco to Seattle
+	[40.7128, -74.0060, 43.6532, -79.3832], // New York to Toronto
+	[34.0522, -118.2437, 35.6762, 139.6503], // Los Angeles to Tokyo
+	
+	// Additional global intercontinental connections
+	[30.12190055847168, 31.40559959411621, 25.2527999878, 55.3643989563], // Cairo to Dubai
+	[25.2527999878, 55.3643989563, 28.7041, 77.1025], // Dubai to New Delhi
+	[-6.1255698204, 106.65599823, -33.8688, 151.2093], // Jakarta to Sydney
 ];
 
 
